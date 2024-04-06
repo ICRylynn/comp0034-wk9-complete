@@ -7,7 +7,6 @@ from paralympics_rest.models import Region, Event
 
 def add_data(db):
     """Adds data to the database if it does not already exist.
-
     :param db: SQLAlchemy database for the app
     """
     # Create a connection to the REST API sqlite database using FlaskSQLAlchemy
@@ -32,7 +31,7 @@ def add_data(db):
 
         # Write the pandas DataFrame contents to the database tables
         # For the event table we want the pandas index, but it needs to start from 1 and not 0
-        events_df.index += 1
+        events_df.index += 1sdsadasdasdas
         events_df.to_sql("event", connection, if_exists="append", index_label='id')
 
     # Close the database connection
